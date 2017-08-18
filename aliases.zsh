@@ -11,6 +11,7 @@ alias apache-stop="sudo apachectl stop"
 alias artifactory="printf \"cache-min=86400\ncache-max=604800\nprogress=false\n\nregistry=https://artifactory.foxsports.com.au/api/npm/npm-remote/\n\" > ~/.npmrc && curl -u \"sean.carey\" https://artifactory.foxsports.com.au/api/npm/auth >> ~/.npmrc && curl -u \"sean.carey\" https://artifactory.foxsports.com.au/api/npm/npm-fsa/auth/fsa >> ~/.npmrc && cat ~/.npmrc"
 alias bsync="browser-sync start --config bs-config.js"
 alias ccat="pygmentize -g -O style=colorful"
+alias chmod-number="stat -f \"%OLp\""   # get the chmod number for a file
 alias composer='/usr/local/bin/composer.phar'
 alias gittag="git tag | sort -V"
 alias grunty='grunt clean && grunt --force && grunt watcher'

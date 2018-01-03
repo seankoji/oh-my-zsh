@@ -11,6 +11,7 @@ alias apache-stop="sudo apachectl stop"
 alias artifactory="printf \"cache-min=86400\ncache-max=604800\nprogress=false\n\nregistry=https://artifactory.foxsports.com.au/api/npm/npm-remote/\n\" > ~/.npmrc && curl -u \"sean.carey\" https://artifactory.foxsports.com.au/api/npm/auth >> ~/.npmrc && curl -u \"sean.carey\" https://artifactory.foxsports.com.au/api/npm/npm-fsa/auth/fsa >> ~/.npmrc && cat ~/.npmrc"
 alias bsync="browser-sync start --config bs-config.js"
 alias ccat="pygmentize -g -O style=colorful"
+alias chmod-number="stat -f \"%OLp\""   # get the chmod number for a file
 alias composer='/usr/local/bin/composer.phar'
 alias gittag="git tag | sort -V"
 alias grunty='grunt clean && grunt --force && grunt watcher'
@@ -26,7 +27,7 @@ alias ssh-reset="rm ~/.ssh/environment-*"
 alias subl="open /Applications/Sublime\ Text.app"
 alias version="node -p \"require('./package.json').version\""
 
-alias vip-up="docker-compose -f ~/repos/vip-quickstart-mirror/docker-compose.dev.yml up"
+alias vip-up="composer update && composer install && docker-compose -f ~/repos/vip-quickstart-mirror/docker-compose.dev.yml up"
 alias vip-down="docker-compose -f ~/repos/vip-quickstart-mirror/docker-compose.dev.yml down"
 
 # disabling artifactory
@@ -40,5 +41,6 @@ alias chmod-remove-x-recursive='sudo chmod -R -x * && sudo chmod -R +X *'
 #echo "AD Password: " && read AD_PASSWORD && echo "sean.carey:$AD_PASSWORD" && unset -v AD_PASSWORD
 
 [ -f ~/.oh-my-zsh/custom/functions/version.zsh ] && source ~/.oh-my-zsh/custom/functions/version.zsh
+[ -f ~/.oh-my-zsh/custom/functions/web-test.zsh ] && source ~/.oh-my-zsh/custom/functions/web-test.zsh
 
 # git config --global url."https://github.com".insteadOf git://github.com

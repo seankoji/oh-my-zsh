@@ -1,4 +1,3 @@
-# WIP
 function v {
     if [ -f package.json ]; then
         echo `version`
@@ -29,7 +28,7 @@ function v {
         read doit
         case $doit in
             [Yy]* )
-                echo "git fetch && git checkout develop && git reset --hard origin/develop && npm version $1 && git checkout master && git reset --hard origin/master && git merge develop"
+                git fetch && git checkout develop && git reset --hard origin/develop && npm version $1 && git checkout master && git reset --hard origin/master && git merge develop
                 break;;
             [Nn]* )
                 echo 'Aborting...';

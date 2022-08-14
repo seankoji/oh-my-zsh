@@ -24,6 +24,7 @@ alias ssh-clipboard="pbcopy < ~/.ssh/id_rsa.pub && echo \"Copied ~/.ssh/id_rsa.p
 alias ssh-reset="rm ~/.ssh/environment-*"
 alias subl="open /Applications/Sublime\ Text.app"
 alias version="node -p \"require('./package.json').version\""
+alias ls="ls -a "
 
 alias vip-up="composer update && composer install && docker-compose -f ~/repos/vip-quickstart-mirror/docker-compose.dev.yml up"
 alias vip-down="docker-compose -f ~/repos/vip-quickstart-mirror/docker-compose.dev.yml down"

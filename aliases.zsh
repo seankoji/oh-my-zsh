@@ -47,7 +47,7 @@ alias chmod-remove-x-recursive='sudo chmod -R -x * && sudo chmod -R +X *'
 [ -f ~/.oh-my-zsh/custom/functions/sourcemap.zsh ] && source ~/.oh-my-zsh/custom/functions/sourcemap.zsh
 [ -f ~/.oh-my-zsh/custom/functions/change-node.zsh ] && source ~/.oh-my-zsh/custom/functions/change-node.zsh
 [ -f ~/.oh-my-zsh/custom/functions/versioncommits.zsh ] && source ~/.oh-my-zsh/custom/functions/versioncommits.zsh
-# [ -f ~/.oh-my-zsh/custom/functions/fast-purge.zsh ] && source ~/.oh-my-zsh/custom/functions/fast-purge.zsh
+[ -f ~/.oh-my-zsh/custom/functions/fast-purge.zsh ] && source ~/.oh-my-zsh/custom/functions/fast-purge.zsh
 [ -f ~/.oh-my-zsh/custom/functions/mobile-bypass.zsh ] && source ~/.oh-my-zsh/custom/functions/mobile-bypass.zsh
 [ -f ~/.oh-my-zsh/custom/functions/mobile-unlink.zsh ] && source ~/.oh-my-zsh/custom/functions/mobile-unlink.zsh
 
